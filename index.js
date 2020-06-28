@@ -129,13 +129,21 @@ game("scissors");
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
+function converter(kilo){
+  kilo = kilo * 0.62137119;
+  console.log(kilo + " miles");
+};
+converter(5);
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+function converter(feet){
+  feet = feet * 30.48;
+  console.log(feet + " centimeters");
+};
+converter(5);
 
 
 
@@ -144,7 +152,15 @@ game("scissors");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+  function annoyingSong(bottles){
+    for(let i = bottles; i > 1; i--){
+      let left = bottles-- - 1;
+      let left2 = i;
+      let left3 = left--;
+      console.log(left2 + " bottles of soda on the wall, " + left3 + " bottles of soda, take one down pass it around, " + left  + " bottles of soda on the wall");
+    }
+  };
+  annoyingSong(10);
 
 
 
