@@ -5,7 +5,7 @@ let votingAge = age;
 
 if(age > 18) {
 console.log(true);
-}
+};
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
@@ -16,7 +16,7 @@ if(height <= 3ft){
     height = height + 1;
 }else{
    height = height;
-}
+};
 
 
 
@@ -33,7 +33,7 @@ stringToNumber = +"1999";
 
 function multiply(a, b) {
     return a * b;
-  }
+  };
   multiply(5, 4);
 
 
@@ -71,6 +71,34 @@ dogYears();
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(ageInMonths, weight){
+  let feed = 0;
+  if(ageInMonths > 12 && weight == 5)
+  {
+    feed = weight * 0.05;
+    console.log("Feed " + feed + " pounds in a day.");
+  }
+  else if(ageInMonths > 12 && weight > 5 || weight <= 10){
+    feed = weight * 0.04;
+    console.log("Feed " + feed + " pounds in a day.");
+  }else if(ageInMonths > 12 && weight > 10 || weight <= 15){
+    feed = weight * 0.03;
+    console.log("Feed " + feed + " pounds in a day");
+  }else if(ageInMonths > 12 && weight > 15){
+    feed = weight * 0.02;
+    console.log("Feed " + feed + " pounds in a day");
+  }else if(weight < 5 && ageInMonths >= 2 || ageInMonths > 4){
+    feed = weight * 0.1;
+    console.log("Feed " + feed + " pounds in a day");
+  }else if(ageInMonths >= 4 || ageInMonths >= 7 && weight < 5){
+    feed = weight * 0.05;
+    console.log("Feed " + feed + " pounds in a day");
+  }else if( ageInMonths > 7 || ageInMonths < 12 && weight < 5){
+    feed = weight * 0.04;
+    console.log("Feed " + feed + " pounds in a day");
+  }
+}
+dogFeeder(6, 4);
 
 
 
@@ -81,7 +109,20 @@ dogYears();
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function game(str){
+  let random = Math.random();
+  if(str == "Scissors" || str == "scissors" && random < .3){
+    console.log("You won!")
+  }else if(str == "Paper" || str == "paper" && random >= .3 && random < .6){
+    console.log("You won!!")
+  }else if(str == "Rock" || "rock" && random > .6 && random <= .9){
+    console.log("You won!!!")
+  }else {
+    console.log("You Lost")
+  }
+};
 
+game("scissors");
   
   
 
