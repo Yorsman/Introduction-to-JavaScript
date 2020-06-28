@@ -13,17 +13,18 @@ console.log(true);
 let height = 0;
 
 if(height <= 3ft){
-    console.log(entrance);
+    height = height + 1;
 }else{
-   let height = 4;
+   height = height;
 }
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-let string = "1999";
-Math.floor(string);
+Number("1999");
+or 
+stringToNumber = +"1999";
 
 
 
@@ -41,8 +42,14 @@ function multiply(a, b) {
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
+function dogYears(age){
+  if(age > 19) {
+  console.log("Too old to be a dog!")
+}else if (age >= 1 && age <= 19) {
+  age = age * 7;
+  console.log("You are " + age + " dog years old.");
+}}
+dogYears();
 
 
 
